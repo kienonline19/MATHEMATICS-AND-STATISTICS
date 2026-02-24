@@ -31,9 +31,9 @@ Dữ liệu bệnh nhân:
 
 ### Yêu cầu:
 
-* Phân loại từng biến.
-* Biến nào là identifier?
-* Biến nào là ordinal?
+- Phân loại từng biến.
+- Biến nào là identifier?
+- Biến nào là ordinal?
 
 ---
 
@@ -48,9 +48,9 @@ Khảo sát nhân viên:
 
 ### Yêu cầu:
 
-* Biến nào định lượng?
-* Satisfaction thuộc loại gì?
-* Có thể tính trung bình Satisfaction không?
+- Biến nào định lượng?
+- Satisfaction thuộc loại gì?
+- Có thể tính trung bình Satisfaction không?
 
 ---
 
@@ -65,8 +65,8 @@ Khảo sát mua sắm:
 
 ### Yêu cầu:
 
-* Phân loại từng biến.
-* PaymentMethod là nominal hay ordinal?
+- Phân loại từng biến.
+- PaymentMethod là nominal hay ordinal?
 
 ---
 
@@ -81,8 +81,8 @@ Dữ liệu sản phẩm:
 
 ### Yêu cầu:
 
-* Rating là quantitative hay ordinal? Giải thích.
-* Category là loại gì?
+- Rating là quantitative hay ordinal? Giải thích.
+- Category là loại gì?
 
 ---
 
@@ -97,8 +97,8 @@ Khảo sát lớp học:
 
 ### Yêu cầu:
 
-* Phân loại GradeLevel.
-* Height và Weight thuộc loại gì?
+- Phân loại GradeLevel.
+- Height và Weight thuộc loại gì?
 
 ---
 
@@ -113,8 +113,8 @@ Khảo sát khách sạn:
 
 ### Yêu cầu:
 
-* Satisfaction là nominal hay ordinal?
-* NightsStayed là loại gì?
+- Satisfaction là nominal hay ordinal?
+- NightsStayed là loại gì?
 
 ---
 
@@ -129,8 +129,8 @@ Dữ liệu giao thông:
 
 ### Yêu cầu:
 
-* Speed là biến gì?
-* Accident là loại gì?
+- Speed là biến gì?
+- Accident là loại gì?
 
 ---
 
@@ -145,8 +145,8 @@ Khảo sát công nghệ:
 
 ### Yêu cầu:
 
-* ScreenSize là continuous hay discrete?
-* DeviceType là nominal hay ordinal?
+- ScreenSize là continuous hay discrete?
+- DeviceType là nominal hay ordinal?
 
 ---
 
@@ -168,3 +168,94 @@ PainScale được đo từ 1–10 (mức độ đau).
 2. Temperature là loại gì?
 3. Diagnosis là loại gì?
 
+# 📘 DATA FRAME DÙNG CHO TẤT CẢ BÀI
+
+Giả sử bạn có:
+
+```r
+df <- data.frame(
+  Name = c("John", "Jack", "Kenny", "Mary", "Tom", "Anna"),
+  Age = c(20, 30, 50, 24, 35, 28),
+  Gender = c("Male", "Male", "Male", "Female", "Male", "Female"),
+  Score = c(80, 85, 90, 95, 88, 92),
+  Department = c("IT", "HR", "IT", "Finance", "IT", "HR")
+)
+```
+
+---
+
+# 🟢 BÀI 1 (Rất dễ)
+
+👉 Chọn hàng thứ 3.
+
+---
+
+# 🟢 BÀI 2 (Dễ)
+
+👉 Chọn các hàng có Age > 30.
+
+---
+
+# 🟢 BÀI 3 (Dễ)
+
+👉 Chọn các hàng có Gender = "Female".
+
+---
+
+# 🟢 BÀI 4 (Trung bình)
+
+👉 Chọn các hàng có Score >= 90.
+
+---
+
+# 🟡 BÀI 5 (Trung bình)
+
+👉 Chọn các hàng có Age > 25 và Gender = "Male".
+
+---
+
+# 🟡 BÀI 6 (Trung bình+)
+
+👉 Chọn các hàng có:
+
+- Department = "IT"
+- và Score > 85
+
+---
+
+# 🟡 BÀI 7 (Trung bình+)
+
+👉 Chọn các hàng có:
+
+- Age < 25
+- hoặc Score > 90
+
+---
+
+# 🟠 BÀI 8 (Khó)
+
+👉 Chọn các hàng:
+
+- Gender là "Male"
+- và Department thuộc IT hoặc HR
+
+(Gợi ý: dùng `%in%`)
+
+---
+
+# 🔴 BÀI 9 (Khó hơn)
+
+👉 Chọn các hàng:
+
+- Age nằm trong khoảng từ 25 đến 40
+- và Score >= 85
+
+---
+
+# 🔴 BÀI 10 (Nâng cao)
+
+👉 Chọn các hàng:
+
+- Department khác "IT"
+- và Score không nhỏ hơn 90
+- và Age không bằng 30
