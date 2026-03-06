@@ -179,8 +179,8 @@ where:
 - $F_{j-1}$ = cumulative probability before class $j$,
 - $d_j$ = class density.
 
-#### First quartile \(Q_1=Q_{0.25}\)
-Since \(0.25 < 0.425\), \(Q_1\) is in class 1, so:
+#### First quartile $Q_1=Q_{0.25}$
+Since $0.25 < 0.425$, $Q_1$ is in class 1, so:
 
 $$
 Q_1 \approx 1000 + \frac{0.25-0}{0.00085}
@@ -188,7 +188,7 @@ Q_1 \approx 1000 + \frac{0.25-0}{0.00085}
 = 1294.1176.
 $$
 
-#### Median \(Q_{0.50}\)
+#### Median $Q_{0.50}$
 Cumulative after class 1 is \(0.425\), after class 2 is \(0.650\), so median is in class 2:
 
 $$
