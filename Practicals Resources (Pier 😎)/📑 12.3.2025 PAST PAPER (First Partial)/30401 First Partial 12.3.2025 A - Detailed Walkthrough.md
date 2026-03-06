@@ -46,9 +46,9 @@ $$
 Equivalent quantile-style characterization:
 
 $$
-\#\{x_i\le m\}\ge \frac n2
+\left|\{i\in\{1,\ldots,n\}:x_i\le m\}\right|\ge \frac n2
 \quad\text{and}\quad
-\#\{x_i\ge m\}\ge \frac n2.
+\left|\{i\in\{1,\ldots,n\}:x_i\ge m\}\right|\ge \frac n2.
 $$
 
 Advantages:
@@ -77,10 +77,10 @@ quantile(Employee$Salary[Employee$Department=="HR"], c(0.85, 1))
 ```
 
 Interpretation:
-- lower bound = \(Q_{0.85}\) in HR,
+- lower bound = $Q_{0.85}$ in HR,
 - upper bound = max HR salary.
 
-Hence the interval \([Q_{0.85}, \max]\) gives the range for top-15%-paid HR employees.
+Hence the interval $[Q_{0.85}, \max]$ gives the range for top-15%-paid HR employees.
 
 ---
 
@@ -197,7 +197,7 @@ Q_{0.50} \approx 1500 + \frac{0.50-0.425}{0.00045}
 =1666.6667.
 $$
 
-#### Third quartile \(Q_3=Q_{0.75}\)
+#### Third quartile $Q_3=Q_{0.75}$
 Cumulative reaches exactly \(0.75\) at the end of class 4, hence
 
 $$
@@ -256,7 +256,7 @@ Use quartiles, mean, and SD to comment on:
 
 For grouped sample specifically:
 - $\bar x_{\text{grp}}=2875$ is much larger than median $\approx1666.67$, suggesting right-skew.
-- \(Q_3=5000\) while \(Q_1\approx1294.12\), so the central 50% already spans a wide interval.
+- $Q_3=5000$ while $Q_1\approx1294.12$, so the central 50% already spans a wide interval.
 - A large mass in the top class \([5000,8000]\) (25%) indicates substantial upper-tail weight.
 
 ---
@@ -329,7 +329,7 @@ P(A\cup B)=P(A)+P(B)-P(A\cap B),\qquad
 P(A\setminus B)=P(A)-P(A\cap B).
 $$
 
-3. Check whether the claim requires containment (e.g., \(P(B\cap C)=P(C)\iff C\subseteq B\)).
+3. Check whether the claim requires containment (e.g., $P(B\cap C)=P(C)\iff C\subseteq B$).
 4. If claim is “in general,” test with a counterexample; one valid counterexample is enough to conclude FALSE.
 
 ---
@@ -400,8 +400,8 @@ $$
 
 ### d) Weather-mixture revision
 Given:
-- Rain (probability 0.2): \(X_1\sim\text{Poisson}(30)\),
-- No rain (probability 0.8): \(X_2\sim\text{Poisson}(\mu_2)\),
+- Rain (probability 0.2): $X_1\sim\text{Poisson}(30)$,
+- No rain (probability 0.8): $X_2\sim\text{Poisson}(\mu_2)$,
 - Overall mean: \(E[X]=20\).
 
 By total expectation:
@@ -428,8 +428,8 @@ Computed outputs:
 1. $\mu_2=17.5$.
 2. 90% typical range approximately **13 to 30**.
 3. $P(X\ge 30)\approx 0.10812$ (about **10.81%**).
-4. Over 200 days, with \(Y\sim\text{Binomial}(200,0.10812)\):
-   - \(E[Y]\approx21.62\),
-   - \(P(Y\le10)\approx0.00298\).
+4. Over 200 days, with $Y\sim\text{Binomial}(200,0.10812)$:
+   - $E[Y]\approx21.62$,
+   - $P(Y\le10)\approx0.00298$.
 
 Interpretation: weather heterogeneity substantially increases tail risk versus the simple Poisson(20) model.
