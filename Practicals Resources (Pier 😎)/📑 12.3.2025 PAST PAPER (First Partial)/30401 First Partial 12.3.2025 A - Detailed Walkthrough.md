@@ -134,7 +134,7 @@ This yields minimum, \(Q_1\), median, \(Q_3\), and maximum.
 ---
 
 ### b) Relative frequencies and histogram densities (grouped sample)
-Let class width of class \(i\) be \(w_i\). Here:
+Let class width of class $i$ be $w_i$. Here:
 
 $$
 (w_1,w_2,w_3,w_4,w_5)=(500,500,1000,2000,3000).
@@ -168,16 +168,16 @@ $$
 ---
 
 ### c) Quartiles for grouped data (linear interpolation)
-For grouped data, a quantile at cumulative probability \(q\) inside class \(j\) is approximated by
+For grouped data, a quantile at cumulative probability $q$ inside class $j$ is approximated by
 
 $$
 Q_q \approx L_j + \frac{q-F_{j-1}}{d_j},
 $$
 
 where:
-- \(L_j\) = lower class boundary,
-- \(F_{j-1}\) = cumulative probability before class \(j\),
-- \(d_j\) = class density.
+- $L_j$ = lower class boundary,
+- $F_{j-1}$ = cumulative probability before class $j$,
+- $d_j$ = class density.
 
 #### First quartile \(Q_1=Q_{0.25}\)
 Since \(0.25 < 0.425\), \(Q_1\) is in class 1, so:
@@ -321,7 +321,7 @@ Exactness:
 
 The exact symbolic lines in the PDF image layer were not fully extractable here.
 To still solve this rigorously, use the following **universal checking workflow** for each statement:
-1. Convert any set statement into implication form (e.g., \(x\in B\cap C \Rightarrow x\in C\)).
+1. Convert any set statement into implication form (e.g., $x\in B\cap C \Rightarrow x\in C$).
 2. For probability equalities, rewrite both sides using
 
 $$
